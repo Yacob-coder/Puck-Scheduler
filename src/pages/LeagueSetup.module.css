@@ -1,0 +1,261 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+/* ─── Section header ─── */
+.sectionHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.sectionTitle {
+  font-size: var(--text-heading-sm-size);
+  font-weight: var(--text-heading-sm-weight);
+  line-height: var(--text-heading-sm-lh);
+  letter-spacing: var(--text-heading-sm-ls);
+  color: var(--color-ink);
+  margin: 0 0 var(--space-xxs);
+}
+
+.sectionHint {
+  font-size: var(--text-body-md-size);
+  font-weight: var(--text-body-md-weight);
+  color: var(--color-ink-mute);
+  margin: 0 0 var(--space-xl);
+  line-height: var(--text-body-md-lh);
+}
+
+.sectionHeader .sectionHint {
+  margin-bottom: 0;
+}
+
+/* ─── Season grid ─── */
+.seasonGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--space-xl);
+}
+
+@media (max-width: 640px) {
+  .seasonGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Division list ─── */
+.divisionList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.division {
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.divisionHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  background-color: var(--color-canvas-soft);
+  border-bottom: 1px solid var(--color-hairline);
+}
+
+.divisionIndex {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: var(--color-primary-bg-subdued);
+  color: var(--color-primary-deep);
+  font-size: var(--text-caption-size);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divisionPickers {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.selectWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.selectLabel {
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--color-ink-mute);
+  line-height: 1;
+}
+
+.select {
+  appearance: none;
+  background-color: var(--color-canvas);
+  border: 1px solid var(--color-hairline-input);
+  border-radius: var(--radius-sm);
+  padding: 5px var(--space-xl) 5px var(--space-md);
+  font-size: var(--text-body-md-size);
+  font-weight: 400;
+  color: var(--color-ink);
+  font-family: var(--font-family);
+  cursor: pointer;
+  outline: none;
+  min-width: 96px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748d' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(55, 48, 163, 0.10);
+}
+
+.select option[value=""] {
+  color: var(--color-ink-mute);
+}
+
+.divisionLabelPreview {
+  font-size: var(--text-body-md-size);
+  font-weight: 400;
+  color: var(--color-ink-mute);
+  font-style: italic;
+  white-space: nowrap;
+}
+
+/* ─── Team list ─── */
+.teamList {
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.teamRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.teamIndex {
+  flex-shrink: 0;
+  width: 18px;
+  font-size: var(--text-caption-size);
+  color: var(--color-ink-mute);
+  text-align: right;
+}
+
+.teamInput {
+  flex: 1;
+  background-color: var(--color-canvas);
+  border: 1px solid var(--color-hairline-input);
+  border-radius: var(--radius-sm);
+  padding: 6px var(--space-md);
+  font-size: var(--text-body-md-size);
+  font-weight: var(--text-body-md-weight);
+  color: var(--color-ink);
+  font-family: var(--font-family);
+  outline: none;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+  min-height: 36px;
+}
+
+.teamInput::placeholder {
+  color: var(--color-ink-mute);
+}
+
+.teamInput:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(55, 48, 163, 0.10);
+}
+
+/* ─── Shared remove button ─── */
+.removeBtn {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-ink-mute);
+  font-size: 11px;
+  padding: 4px 6px;
+  border-radius: var(--radius-xs);
+  line-height: 1;
+  transition: color 100ms ease, background-color 100ms ease;
+}
+
+.removeBtn:hover {
+  color: var(--color-ruby);
+  background-color: #fee2e2;
+}
+
+/* ─── Add team button ─── */
+.addTeamBtn {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-primary);
+  font-size: var(--text-caption-size);
+  font-family: var(--font-family);
+  font-weight: 400;
+  padding: var(--space-xs) 0;
+  margin-top: var(--space-xxs);
+  line-height: 1;
+  transition: opacity 120ms ease;
+}
+
+.addTeamBtn:hover {
+  opacity: 0.75;
+}
+
+/* ─── CSV import stub ─── */
+.csvRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xl);
+}
+
+.csvText {
+  flex: 1;
+}
+
+.csvTitleRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xs);
+}
+
+.csvTitle {
+  font-size: var(--text-body-md-size);
+  font-weight: 400;
+  color: var(--color-ink);
+}
+
+.csvHint {
+  font-size: var(--text-body-md-size);
+  font-weight: var(--text-body-md-weight);
+  color: var(--color-ink-mute);
+  line-height: var(--text-body-md-lh);
+  margin: 0;
+  max-width: 520px;
+}
