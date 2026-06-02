@@ -1,11 +1,11 @@
 :root {
   /* ─── Colors: Brand & Accent ─── */
-  --color-primary:            #533afd;
-  --color-primary-deep:       #4434d4;
-  --color-primary-press:      #2e2b8c;
-  --color-primary-soft:       #665efd;
-  --color-primary-bg-subdued: #b9b9f9;
-  --color-brand-dark-900:     #1c1e54;
+  --color-primary:            #3730a3;
+  --color-primary-deep:       #312e81;
+  --color-primary-press:      #23206b;
+  --color-primary-soft:       #4f46e5;
+  --color-primary-bg-subdued: #c7d2fe;
+  --color-brand-dark-900:     #1e1b4b;
   --color-ruby:               #ea2261;
   --color-magenta:            #f96bee;
   --color-lemon:              #9b6829;
