@@ -1,0 +1,371 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+/* ─── Summary bar ─── */
+.summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  padding: var(--space-md) var(--space-lg);
+  background-color: var(--color-canvas-soft);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius-md);
+}
+
+.summaryCount {
+  font-size: var(--text-body-md-size);
+  font-weight: 400;
+  color: var(--color-ink);
+}
+
+.qualityBreakdown {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.qualityChip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--text-caption-size);
+  font-weight: 400;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.chipHigh  { color: #065f46; }
+.chipHigh .dot  { background-color: #10b981; }
+
+.chipMedium { color: #92400e; }
+.chipMedium .dot { background-color: #f59e0b; }
+
+.chipLow { color: #991b1b; }
+.chipLow .dot { background-color: #ef4444; }
+
+/* ─── Venue card ─── */
+.venueHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.venueName {
+  font-size: var(--text-heading-sm-size);
+  font-weight: var(--text-heading-sm-weight);
+  line-height: var(--text-heading-sm-lh);
+  color: var(--color-ink);
+  margin: 0 0 var(--space-xxs);
+}
+
+.venueCount {
+  font-size: var(--text-caption-size);
+  color: var(--color-ink-mute);
+  margin: 0;
+}
+
+/* ─── Slot table ─── */
+.slotTable {
+  display: flex;
+  flex-direction: column;
+}
+
+.slotHead,
+.slotRow {
+  display: grid;
+  grid-template-columns: 150px 90px 72px 1fr 28px;
+  gap: var(--space-md);
+  align-items: center;
+  padding: var(--space-sm) var(--space-sm);
+}
+
+.slotHead {
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-ink-mute);
+  border-bottom: 1px solid var(--color-hairline);
+  padding-bottom: var(--space-sm);
+}
+
+.slotRow {
+  border-bottom: 1px solid var(--color-hairline);
+  font-size: var(--text-body-md-size);
+  color: var(--color-ink);
+}
+
+.slotRow:last-child {
+  border-bottom: none;
+}
+
+.slotRow:hover {
+  background-color: var(--color-canvas-soft);
+  border-radius: var(--radius-sm);
+}
+
+.dateCell {
+  font-size: var(--text-body-md-size);
+  color: var(--color-ink);
+}
+
+.timeCell {
+  font-size: var(--text-body-md-size);
+  font-feature-settings: 'tnum';
+  color: var(--color-ink);
+}
+
+.durCell {
+  font-size: var(--text-body-md-size);
+  color: var(--color-ink-mute);
+  font-feature-settings: 'tnum';
+}
+
+/* ─── Quality cell ─── */
+.qualityCell {
+  display: flex;
+  align-items: center;
+}
+
+.qualityPill {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+/* ─── Quality badge ─── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--radius-pill);
+  padding: 3px 10px;
+  font-size: var(--text-caption-size);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.badgeHigh   { background-color: #d1fae5; color: #065f46; }
+.badgeMedium { background-color: #fef3c7; color: #92400e; }
+.badgeLow    { background-color: #fee2e2; color: #991b1b; }
+
+.customTag {
+  font-size: 10px;
+  color: var(--color-ink-mute);
+  font-style: italic;
+}
+
+/* ─── Edit / override ─── */
+.editBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: var(--text-caption-size);
+  color: var(--color-ink-mute);
+  padding: 2px 4px;
+  border-radius: var(--radius-xs);
+  opacity: 0;
+  transition: opacity 100ms ease, color 100ms ease;
+  font-family: var(--font-family);
+}
+
+.slotRow:hover .editBtn {
+  opacity: 1;
+}
+
+.editBtn:hover {
+  color: var(--color-primary);
+}
+
+.overrideControl {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.overrideSelect {
+  appearance: none;
+  background-color: var(--color-canvas);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  padding: 4px var(--space-xl) 4px var(--space-sm);
+  font-size: var(--text-caption-size);
+  font-family: var(--font-family);
+  color: var(--color-ink);
+  outline: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748d' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 6px center;
+  box-shadow: 0 0 0 3px rgba(55, 48, 163, 0.10);
+}
+
+.overrideDone {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: var(--text-caption-size);
+  font-family: var(--font-family);
+  color: var(--color-primary);
+  font-weight: 500;
+  padding: 4px 2px;
+}
+
+.overrideDone:hover {
+  opacity: 0.75;
+}
+
+/* ─── Remove button ─── */
+.removeBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-ink-mute);
+  font-size: 11px;
+  padding: 4px 6px;
+  border-radius: var(--radius-xs);
+  opacity: 0;
+  transition: opacity 100ms ease, color 100ms ease, background-color 100ms ease;
+}
+
+.slotRow:hover .removeBtn {
+  opacity: 1;
+}
+
+.removeBtn:hover {
+  color: var(--color-ruby);
+  background-color: #fee2e2;
+}
+
+/* ─── Empty state ─── */
+.emptyHint {
+  font-size: var(--text-body-md-size);
+  color: var(--color-ink-mute);
+  margin: 0;
+  padding: var(--space-lg) 0 var(--space-xs);
+}
+
+/* ─── Add slot form ─── */
+.addSlotForm {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+  padding: var(--space-md) var(--space-sm);
+  background-color: var(--color-canvas-soft);
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--color-hairline);
+  flex-wrap: wrap;
+}
+
+.addInput {
+  background-color: var(--color-canvas);
+  border: 1px solid var(--color-hairline-input);
+  border-radius: var(--radius-sm);
+  padding: 6px var(--space-md);
+  font-size: var(--text-body-md-size);
+  font-family: var(--font-family);
+  color: var(--color-ink);
+  outline: none;
+  min-height: 34px;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.addInput:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(55, 48, 163, 0.10);
+}
+
+.addSelect {
+  appearance: none;
+  background-color: var(--color-canvas);
+  border: 1px solid var(--color-hairline-input);
+  border-radius: var(--radius-sm);
+  padding: 6px var(--space-xl) 6px var(--space-md);
+  font-size: var(--text-body-md-size);
+  font-family: var(--font-family);
+  color: var(--color-ink);
+  outline: none;
+  cursor: pointer;
+  min-height: 34px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748d' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  transition: border-color 120ms ease;
+}
+
+.addSelect:focus {
+  border-color: var(--color-primary);
+}
+
+/* ─── Add venue form ─── */
+.addVenueForm {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.addVenueLabel {
+  font-size: var(--text-caption-size);
+  font-weight: 500;
+  color: var(--color-ink-secondary);
+  white-space: nowrap;
+}
+
+/* ─── Quality legend ─── */
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.legendTitle {
+  font-size: var(--text-caption-size);
+  font-weight: 500;
+  color: var(--color-ink-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.legendItems {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.legendText {
+  font-size: var(--text-body-md-size);
+  color: var(--color-ink-mute);
+}
+
+.legendNote {
+  font-size: var(--text-body-md-size);
+  color: var(--color-ink-mute);
+  margin: 0;
+  line-height: var(--text-body-md-lh);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-hairline);
+}
+
+.legendNote strong {
+  color: var(--color-ink-secondary);
+  font-weight: 500;
+}
