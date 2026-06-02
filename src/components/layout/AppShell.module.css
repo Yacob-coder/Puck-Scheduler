@@ -1,0 +1,25 @@
+.shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-canvas-soft);
+}
+
+.content {
+  flex: 1;
+  padding: var(--space-xxl);
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}

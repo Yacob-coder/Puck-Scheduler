@@ -1,0 +1,144 @@
+@import './tokens.css';
+
+/* ─── Reset ─── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Base ─── */
+body {
+  font-family: var(--font-family);
+  font-size: var(--text-body-md-size);
+  font-weight: var(--text-body-md-weight);
+  line-height: var(--text-body-md-lh);
+  color: var(--color-ink);
+  background-color: var(--color-canvas);
+  /* ss01: single-story 'a' — brand typographic signature */
+  font-feature-settings: 'ss01';
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img,
+svg {
+  display: block;
+}
+
+input,
+button,
+select,
+textarea {
+  font: inherit;
+}
+
+/* ─── Typography utility classes ─── */
+.text-display-xxl {
+  font-size: var(--text-display-xxl-size);
+  font-weight: var(--text-display-xxl-weight);
+  line-height: var(--text-display-xxl-lh);
+  letter-spacing: var(--text-display-xxl-ls);
+}
+
+.text-display-xl {
+  font-size: var(--text-display-xl-size);
+  font-weight: var(--text-display-xl-weight);
+  line-height: var(--text-display-xl-lh);
+  letter-spacing: var(--text-display-xl-ls);
+}
+
+.text-display-lg {
+  font-size: var(--text-display-lg-size);
+  font-weight: var(--text-display-lg-weight);
+  line-height: var(--text-display-lg-lh);
+  letter-spacing: var(--text-display-lg-ls);
+}
+
+.text-display-md {
+  font-size: var(--text-display-md-size);
+  font-weight: var(--text-display-md-weight);
+  line-height: var(--text-display-md-lh);
+  letter-spacing: var(--text-display-md-ls);
+}
+
+.text-heading-lg {
+  font-size: var(--text-heading-lg-size);
+  font-weight: var(--text-heading-lg-weight);
+  line-height: var(--text-heading-lg-lh);
+  letter-spacing: var(--text-heading-lg-ls);
+}
+
+.text-heading-md {
+  font-size: var(--text-heading-md-size);
+  font-weight: var(--text-heading-md-weight);
+  line-height: var(--text-heading-md-lh);
+  letter-spacing: var(--text-heading-md-ls);
+}
+
+.text-heading-sm {
+  font-size: var(--text-heading-sm-size);
+  font-weight: var(--text-heading-sm-weight);
+  line-height: var(--text-heading-sm-lh);
+  letter-spacing: var(--text-heading-sm-ls);
+}
+
+.text-body-lg {
+  font-size: var(--text-body-lg-size);
+  font-weight: var(--text-body-lg-weight);
+  line-height: var(--text-body-lg-lh);
+  letter-spacing: var(--text-body-lg-ls);
+}
+
+.text-body-md {
+  font-size: var(--text-body-md-size);
+  font-weight: var(--text-body-md-weight);
+  line-height: var(--text-body-md-lh);
+  letter-spacing: var(--text-body-md-ls);
+}
+
+/* tnum applied per-element — not globally */
+.text-body-tabular {
+  font-size: var(--text-body-tabular-size);
+  font-weight: var(--text-body-tabular-weight);
+  line-height: var(--text-body-tabular-lh);
+  letter-spacing: var(--text-body-tabular-ls);
+  font-feature-settings: 'tnum', 'ss01';
+}
+
+.text-caption {
+  font-size: var(--text-caption-size);
+  font-weight: var(--text-caption-weight);
+  line-height: var(--text-caption-lh);
+  letter-spacing: var(--text-caption-ls);
+  font-feature-settings: 'tnum', 'ss01';
+}
+
+.text-micro {
+  font-size: var(--text-micro-size);
+  font-weight: var(--text-micro-weight);
+  line-height: var(--text-micro-lh);
+  letter-spacing: var(--text-micro-ls);
+}
+
+.text-micro-cap {
+  font-size: var(--text-micro-cap-size);
+  font-weight: var(--text-micro-cap-weight);
+  line-height: var(--text-micro-cap-lh);
+  letter-spacing: var(--text-micro-cap-ls);
+  text-transform: uppercase;
+}

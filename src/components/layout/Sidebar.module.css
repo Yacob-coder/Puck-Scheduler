@@ -1,0 +1,131 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  background-color: var(--color-canvas);
+  border-right: 1px solid var(--color-hairline);
+  overflow-y: auto;
+}
+
+/* ─── Logo ─── */
+.logoArea {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-xl) var(--space-lg);
+  border-bottom: 1px solid var(--color-hairline);
+  text-decoration: none;
+}
+
+.logoIcon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.logoText {
+  font-size: var(--text-heading-sm-size);
+  font-weight: 400;
+  letter-spacing: -0.3px;
+  color: var(--color-ink);
+  line-height: 1;
+}
+
+.logoText span {
+  color: var(--color-primary);
+}
+
+/* ─── Navigation ─── */
+.nav {
+  flex: 1;
+  padding: var(--space-md) var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxs);
+}
+
+.navSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxs);
+}
+
+.navSectionLabel {
+  font-size: var(--text-micro-cap-size);
+  font-weight: var(--text-micro-cap-weight);
+  color: var(--color-ink-mute);
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  padding: var(--space-sm) var(--space-sm) var(--space-xxs);
+  margin-top: var(--space-sm);
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-sm);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--color-ink-mute);
+  font-size: var(--text-body-md-size);
+  font-weight: 300;
+  line-height: 1;
+  transition: background-color 100ms ease, color 100ms ease;
+  cursor: pointer;
+}
+
+.navItem:hover {
+  background-color: var(--color-canvas-soft);
+  color: var(--color-ink);
+  text-decoration: none;
+}
+
+.navItemActive {
+  background-color: var(--color-primary-bg-subdued);
+  color: var(--color-primary);
+}
+
+.navItemActive:hover {
+  background-color: var(--color-primary-bg-subdued);
+  color: var(--color-primary);
+}
+
+.navIcon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+.navItemActive .navIcon {
+  opacity: 1;
+}
+
+/* ─── Step indicator (season workflow) ─── */
+.stepNumber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 400;
+  background-color: var(--color-hairline);
+  color: var(--color-ink-mute);
+  flex-shrink: 0;
+}
+
+.navItemActive .stepNumber {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+/* ─── Bottom ─── */
+.bottom {
+  padding: var(--space-md) var(--space-sm);
+  border-top: 1px solid var(--color-hairline);
+}
